@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "lovicbagsfront": {
+    "dayanails": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -31,6 +31,16 @@
           },
           "configurations": {
             "production": {
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": true
+                },
+                "fonts": {
+                  "inline": false
+                }
+              },
               "budgets": [
                 {
                   "type": "initial",
@@ -39,8 +49,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "50kB",
+                  "maximumError": "100kB"
                 }
               ],
               "outputHashing": "all"
@@ -57,10 +67,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "lovicbagsfront:build:production"
+              "buildTarget": "dayanails:build:production"
             },
             "development": {
-              "buildTarget": "lovicbagsfront:build:development"
+              "buildTarget": "dayanails:build:development"
             }
           },
           "defaultConfiguration": "development"
